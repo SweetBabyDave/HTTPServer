@@ -1,0 +1,33 @@
+h1 {
+    color: orange;
+    background-color: blue;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 50px;
+    border: 1px solid black;
+    padding: 2mm;
+}
+
+body {
+    background-color: lemonchiffon;
+}
+
+img {
+    border: 7px solid blue;
+}
+
+.list {
+    color: orange;
+}
+
+#fontcolor {
+    color: darkred;
+}
+
+li:nth-child(even) {
+    background-color: pink;
+}
+
+li:nth-child(odd) {
+    background-color: plum;
+}

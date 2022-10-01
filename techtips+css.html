@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <title>CSS Tech Tips</title>
+        <style>
+            h3 {
+            font-family: monospace
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>
+            CSS Tech Tips
+        </h1>
+
+            <ul class="list">
+                
+                <li><a href="index.html">Blog Section</a></li>
+                <li><a href="techtips-css.html">Techtips - CSS</a></li>
+                <li><a href="about.html">About Section</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="http://localhost:8000/forbidden">Forbidden</a></li>
+                <li><a href="http://localhost:8000/debugging">Debugger</a></li>
+                <li><a href="http://localhost:8000/teapot">Teapot</a></li>
+
+            </ul>
+
+        <div style="background-color: lightgreen;">
+
+            <h2>
+                HTML Elements
+            </h2>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html">&lt;html&gt;</a>
+            </h3>
+
+            <ul>
+                <li>Purpose: The HTML root element. All elements must be a descendant of this element</li>
+                <li>Display: Neither</li>
+                <li>Parents: None</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a>
+            </h3>
+
+            <ul>
+                <li>Purpose: The first of 6 different levels of section headings. It helps the html document to flow better.</li>
+                <li>Display: Block-level</li>
+                <li>Parents: Any element that accepts flow content</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a>
+            </h3>
+
+            <ul>
+                <li>Purpose: The HTML paragraph element. It is used to structurally group related content.</li>
+                <li>Display: Block-level</li>
+                <li>Parents: Any element that accepts flow content.</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body">&lt;body&gt;</a>
+            </h3>
+
+            <ul>
+                <li>Purpose: Represents the content of the HTML document.</li>
+                <li>Display: Block-level</li>
+                <li>Parents: Must be second element of &lt;html&gt;</li>
+
+            </ul>
+
+            <h2>
+                HTML Character Entities
+            </h2>
+
+            <h3>
+                &amp;gt; (Greater Than)
+            </h3>
+
+            <ul>
+                <li>Purpose: The way to show the greater than symbol in an HTML document</li>
+                <li>Symbol: &gt;</li>
+            </ul>
+
+            <h3>
+                &amp;lt; (Less Than)
+            </h3>
+
+            <ul>
+                <li>Purpose: The way to show the less than symbol in an HTML document</li>
+                <li>Symbol: &lt;</li>
+            </ul>
+
+            <h3>
+                &amp;amp; (Ampersand)
+            </h3>
+
+            <ul>
+                <li>Purpose: The way to show the ampersand symbol in an HTML document</li>
+                <li>Symbol: &amp;</li>
+            </ul>
+
+            <h2>
+                CSS Selectors
+            </h2>
+
+            <h3>
+                element
+            </h3>
+
+            <ul>
+                <li>Purpose: Matches elements by node name. Letting you be able to select all elements of the same type.</li>
+                <li>How To Use: In the header or CSS file, write the element name then give it style properties.</li>
+            </ul>
+
+            <h3>
+                .class
+            </h3>
+
+            <ul>
+                <li>Purpose: Matches the elements based on contents set by the user in the class.</li>
+                <li>How To Use: You assign a class by doing it in the header or the separate CSS file. You just write it as .[insert class name here] then you can make class adjustments.</li>
+            </ul>
+
+            <h3>
+                #id
+            </h3>
+
+            <ul>
+                <li>Purpose: Matches an element based on the set value by the user for the id attribute.</li>
+                <li>How To Use: You assign an id in the header or separate CSS file. You just write #[insert name of id here] and set the style properties.</li>
+            </ul>
+
+            <h3>
+                :nth-child
+            </h3>
+
+            <ul>
+                <li>Purpose: Selects elements based on their positioning in a group.</li>
+                <li>How To Use: You assign an nth-child in the header or separate CSS file. You write :nth-child(which children you want different) then set the style properties.</li>
+            </ul>
+
+            <h2>
+                CSS Properties
+            </h2>
+
+            <h3>
+                background-color:
+            </h3>
+
+            <ul>
+                <li>Purpose: A way to select and change the color of the block that the element is referring to.</li>
+                <li>Possible Value: lemonchiffon</li>
+
+            </ul>
+
+            <h3>
+                color:
+            </h3>
+
+            <ul>
+                <li>Purpose: A way to select and change the color of the inline that the element is referring to.</li>
+                <li>Possible Value: darkred</li>
+            </ul>
+
+            <h3>
+                font-style:
+            </h3>
+
+            <ul>
+                <li>Purpose: A way to select and change the way that the font is seen by the user.</li>
+                <li>Possible Value: italic</li>
+            </ul>
+
+        </div>
+
+    </body>
+</html>

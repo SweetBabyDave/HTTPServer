@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS- Tech Tips</title>
+    </head>
+
+    <body style="background-color: lemonchiffon;">
+
+        <h1 style="    
+            color: orange;
+            background-color: blue;
+            font-style: italic;
+            font-size: 50px;
+            border: 1px solid black;
+            padding: 2mm;">
+            <code>CSS- Tech Tips</code>
+        </h1>
+
+        <ul style="color: orange;">
+            
+            <li style="background-color: plum;"><a href="index.html">Blog Section</a></li>
+            <li style="background-color: pink;"><a href="techtips+css.html">Techtips + CSS</a></li>
+            <li style="background-color: plum;"><a href="about.html">About Section</a></li>
+            <li style="background-color: pink;"><a href="plan.html">Plan</a></li>
+            <li style="background-color: plum;"><a href="http://localhost:8000/forbidden">Forbidden</a></li>
+            <li style="background-color: pink;"><a href="http://localhost:8000/debugging">Debugger</a></li>
+            <li style="background-color: plum;"><a href="http://localhost:8000/teapot">Teapot</a></li>
+
+        </ul>
+
+        <div style="background-color: lightgreen;">
+
+            <h2>
+                HTML Elements
+            </h2>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The HTML root element. All elements must be a descendant of this element</li>
+                <li style="background-color: pink;">Display: Neither</li>
+                <li style="background-color: plum;">Parents: None</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h1&gt;</code></a>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The first of 6 different levels of section headings. It helps the html document to flow better.</li>
+                <li style="background-color: pink;">Display: Block-level</li>
+                <li style="background-color: plum;">Parents: Any element that accepts flow content</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The HTML paragraph element. It is used to structurally group related content.</li>
+                <li style="background-color: pink;">Display: Block-level</li>
+                <li style="background-color: plum;">Parents: Any element that accepts flow content.</li>
+
+            </ul>
+
+            <h3>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: Represents the content of the HTML document.</li>
+                <li style="background-color: pink;">Display: Block-level</li>
+                <li style="background-color: plum;">Parents: Must be second element of &lt;html&gt;</li>
+
+            </ul>
+
+            <h2>
+                HTML Character Entities
+            </h2>
+
+            <h3>
+                <code>&amp;gt; (Greater Than)</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The way to show the greater than symbol in an HTML document</li>
+                <li style="background-color: pink;">Symbol: &gt;</li>
+            </ul>
+
+            <h3>
+                <code>&amp;lt; (Less Than)</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The way to show the less than symbol in an HTML document</li>
+                <li style="background-color: pink;">Symbol: &lt;</li>
+            </ul>
+
+            <h3>
+                <code>&amp;amp; (Ampersand)</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: The way to show the ampersand symbol in an HTML document</li>
+                <li style="background-color: pink;">Symbol: &amp;</li>
+            </ul>
+
+            <h2>
+                CSS Selectors
+            </h2>
+
+            <h3>
+                <code>element</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: Matches elements by node name. Letting you be able to select all elements of the same type.</li>
+                <li style="background-color: pink;">How To Use: In the header or CSS file, write the element name then give it style properties.</li>
+            </ul>
+
+            <h3>
+                <code>.class</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: Matches the elements based on contents set by the user in the class.</li>
+                <li style="background-color: pink;">How To Use: You assign a class by doing it in the header or the separate CSS file. You just write it as .[insert class name here] then you can make class adjustments.</li>
+            </ul>
+
+            <h3>
+                <code>#id</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: Matches an element based on the set value by the user for the id attribute.</li>
+                <li style="background-color: pink;">How To Use: You assign an id in the header or separate CSS file. You just write #[insert name of id here] and set the style properties.</li>
+            </ul>
+
+            <h3>
+                <code>:nth-child</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: Selects elements based on their positioning in a group.</li>
+                <li style="background-color: pink;">How To Use: You assign an nth-child in the header or separate CSS file. You write :nth-child(which children you want different) then set the style properties.</li>
+            </ul>
+
+            <h2>
+                CSS Properties
+            </h2>
+
+            <h3>
+                <code>background-color:</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: A way to select and change the color of the block that the element is referring to.</li>
+                <li style="background-color: pink;">Possible Value: lemonchiffon</li>
+
+            </ul>
+
+            <h3>
+                <code>color:</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: A way to select and change the color of the inline that the element is referring to.</li>
+                <li style="background-color: pink;">Possible Value: darkred</li>
+            </ul>
+
+            <h3>
+                <code>font-style:</code>
+            </h3>
+
+            <ul>
+                <li style="background-color: plum;">Purpose: A way to select and change the way that the font is seen by the user.</li>
+                <li style="background-color: pink;">Possible Value: italic</li>
+            </ul>
+
+        </div>
+
+    </body>
+</html>
