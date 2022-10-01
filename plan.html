@@ -25,118 +25,160 @@
 
         </ul>
 
+        <div style="background-color: lightgreen;">
+
         <h2>
             Phase 0: Requirements Specification
         </h2>
 
-        
-            I need to write a website for a fictional client that allows them to write their own blog. This website will have an about section featuring the client. It will also have CSS Tips as well. This program is aimed to generate a level of familiarity with HTML.
+            I need to create a server for the blog that I created in the last assignment. I need to add a few more dynamic pages to the website. I also need to work with HTTP Headers and requests to make sure my websites are all valid.
 
             <h3>Good Solution</h3>
 
-                A good solution has all of the sections clearly labeling and links to each of them. The CSS and CSS- page look very similar, if not the same, with helpful information about CSS. There are pictures in the about section, and clearly labelled blog posts in the blog section. There are also no errors when ran through the validators. 
+                A good solution will handle all of the client errors in writing the address for the webpage they want to go to. It will have all of the headers and requests required in the assignment documentation.
 
             <h3>Challenges</h3>
 
-                One challenge I see is creating all of the different styles for the CSS- page. It seems tedious and it might get messy with some of the errors seen in the validator. Making sure that I understand that information will be key when I am writing up the document.
+                One challenge I can see is creating the dynamic webpages. It seems difficult to create a page as the user visits the website and not have it already created.
 
             <h3>Knowns</h3>
 
-                I already know how to write basic HTML, so getting all of the text on the page should be pretty easy.
+                I didn't know a lot of the information to this assignment before starting, but I know how to write the basic HTML for the dynamic webpage creation. From class, I know slightly how to create HTTP requests, but I'm going to need to do some research on HTTP requests. I will also need to look into the http.server library as well.
+         </div>
 
+        <div style="background-color: blue">
 
         <h2>
             Phase 1: System Analysis
         </h2>
 
-        
             <h3>Data</h3>
 
-                The only real information is coming from the hyperlinks to take us over to other pages. This information comes from relative URLs that are just locally on my computer. There also is supposed to be a CSS document that gives style to most of the other HTML documents.
+                There is information coming from the directory to take us over to other pages. There are HTML documents, jpgs, etc. in the directory. There also is supposed to be a CSS document that gives style to most of the other HTML documents.
 
             <h3>Output</h3>
 
-                The output will be an HTML document. It looks like a regular blog website.
+                The output will be an HTML document. It looks like a regular blog website. This blog website will be on a HTTP server.
 
             <h3>Algorithms</h3>
 
-                It is mostly just basic HTML with styling preferences and editing text. I will use HTML elements and character entities, along with CSS selectors and properties.
+                There will be a function that completes a GET request. A function that completes the HTTP headers. And another function that opens files.
+
+        </div>
+
+        <div style="background-color: lightgreen">
 
         <h2>
             Phase 2: Design
         </h2>
-        
-            There are not any functions that are used in the making of this assignment. I am just going to be using the HTML elements and character entities. If you want to know more about some of those, then please see my future CSS pages, they will be explained there.
 
             <h3>Visuals</h3>
 
-                The blog page will be a generic blog post with text on it, lists, and titles of blog posts. The about page will be 3 pictures with text below each of them. The text will be the gap between each picture. The CSS pages will be text with a lot of lists that are zebra colored. It will also have a different background color for the text. There will also be hyperlinks between pages at the top of each page. These are relative hyperlinks and are on my computer locally.
+                Since this part is coming mostly from the last assignment, this will the same with a few added HTML pages. The blog page will be a generic blog post with text on it, lists, and titles of blog posts. The about page will be 3 pictures with text below each of them. The text will be the gap between each picture. The CSS pages will be text with a lot of lists that are zebra colored. It will also have a different background color for the text. There will also be hyperlinks between pages at the top of each page. These are relative hyperlinks and are on my computer locally.
 
             <h3>CSS</h3>
 
                 I will have a CSS style file that just states how the header will look, how the lists will look, and how the background will look.
 
+            <h3>HTTP Requests</h3>
+
+                I will have functions that handle the HTTP Requests of the client. I am going to be using the wfile.write() function to write the information.
+
+            <h3>HTTP Response</h3>
+
+                I will have a function that handles the HTTP Response of the server. Looking over the assigned document, I will use the send_response() function in the server class.
+
+        </div>
+        <div style="background-color: blue">
         <h2>
             Phase 3: Implementation
         </h2>
         
-            There really is no code to write for this section. I feel like if I write any html here, it would look similar to my actual html implementation.
+            <pre>
+                <code>
+                    def do_GET(self):
+                        """
+                        Does the GET request that the client sends to the server. Makes sure the address is valid.
+                        Input: Takes the path that the user inputs into the address bar and checks if it's valid.
+                        Output: Writes the actual data to the webpage with wfile.write().
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    def do_HEAD(self, fileSize=None, fileType=None, location=None, code=200):
+                        """
+                        Does the HTTP Header response that the server sends to the client. Makes sure the address is valid.
+                        Input: Checks the code that the do_GET() sends. Along with, a file size, file type, and location. These all come from the do_GET() method.
+                        Output: Sends headers to the server.
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    def openFile(self, file):
+                        """
+                        Opens the file and reads it.
+                        Input: file from the directory.
+                        Output: Sends the file data in the do_GET() method.
+                </code>
+            </pre>
 
+        </div>
+        <div style="background-color: lightgreen">
         <h2>
             Phase 4: Testing and Debugging
         </h2>
         
-            I have ran my documents through the HTML and CSS validator a lot as I have written up the blog. The most common errors were:
+            I have ran netcat for this server a lot to try and understand the server. The most common errors were:
 
         <ul>
-            <li>There is a ending &lt;/p&gt; without a &lt;p&gt; element in scope.</li>
-            <li>There are multiple uses of the #id when there should only be one.</li>
+            <li>Incorrect headers</li>
+            <li>Downloading the file when I wanted it to display</li>
+            <li>The page not loading because of incorrect bytes for the headers</li>
         </ul>
-        
-            For the first one, so long as I made sure that the p element was used a little more liberally at the beginning and end of multiple paragraphs, it helped to fix the error. The next one I couldn't figure out, but as long as I only used one instance of the id, the error was fixed. If you want to run the tests just go to:
-            <ul>
-                <li><a href="https://validator.w3.org/nu/#file">HTML Validator</a></li>
-                <li><a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
-            </ul>
 
+            If you would like to test that the server operates correctly, I would recommend starting it and using netcat. If you go to your terminal while the server is running, just run "nc localhost 8000". Then type in "GET /index.html HTTP/1.1". Then press enter twice and you can see your headers for that page and the html of the page.
+
+        </div>
+        <div style="background-color: blue">
         <h2>
             Phase 5: Deployment
         </h2>
 
             I turned in the zip file and made sure that each of the files were properly named.
-
+        </div>
+        <div style="background-color: lightgreen">
         <h2>
             Phase 6: Maintenance
         </h2>
 
             What parts of your program are sloppily written and hard to understand?
             <ul>
-                <li>The techtips-css page is difficult to understand because of all of the text that is required for the styling.</li>
+                <li>I would say my do_GET() is not the best. It has a lot of HTML and elif statements to redirect to the correct pages. It seems a little funky.</li>
             </ul>
             
             Are there parts of your program which you aren’t quite sure how/why they work?
             <ul>
-                <li>I don't exactly understand the #id of the CSS selectors. I used it, but I never understood why if I used it multiple times it would give me an error. Which is why I only used it once.</li>
+                <li>The do_HEAD() is a little confusing to me. The send_response() never made a whole lot of sense to me, it seems like it was an initializing header.</li>
             </ul>
         
             If a bug is reported in a few months, how long would it take you to find the cause?
             <ul>
-                <li>I would be able to find the cause pretty rapidly. I would say 30 minutes or less.</li>
+                <li>It would take me awhile if it was in the do_GET() method, but if it was in the other 2 methods then I would be able to find it quickly.</li>
             </ul>
             
             Will your documentation make sense to anybody besides yourself?    
             <ul>
-                <li>The techtips-css page is difficult to understand because of all of the text that is required for the styling. It wouldn't be too terrible though.</li>
+                <li>I think the do_GET would be confusing to someone else.</li>
             </ul>
         
             yourself in six month’s time?   
             <ul>
-                <li>Definitely, it's not too much to look at.</li>
+                <li>I would have to take some time to relook it over in 6 months.</li>
             </ul>
         
             How easy will it be to add a new feature to this program in a year?    
             <ul>
-                <li>It would be extremely easy.</li>
+                <li>It wouldn't be that bad. I think it would be pretty easy because there's not a whole lot of code.</li>
             </ul>
         
             Will your program continue to work after upgrading
@@ -154,6 +196,6 @@
             <ul>
                 <li>Definitely.</li>
             </ul>
-
+        </div>
     </body>
 </html>
